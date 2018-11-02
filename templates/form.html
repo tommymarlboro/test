@@ -1,0 +1,29 @@
+<form method="POST">
+    MSISDN:<input id="text" name="text"><br>
+    Period <br>
+    Date from:<input name="date-from"><br>
+    Date till:<input name="date-to">
+    <input type="submit">
+</form>
+
+<!--
+<button id="lol">
+	ok
+</button>
+<script type="text/javascript">
+	var button = document.getElementById('lol')
+
+	button.click(function() {
+		var text = document.getElementById('text')
+
+		fetch('/', {
+			method: 'POST',
+			body: 'text=' + text.value
+		}).then(function(data) {
+			return data.text()
+		}).then(function(text) {
+			console.log(text)
+		})
+	})
+</script>
+-->
