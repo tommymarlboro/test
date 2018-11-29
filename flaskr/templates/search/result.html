@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Result {% endblock %}</h1>
+{% endblock %}
+
+
+<div class="container">
+	{% block content %}
+	<div class="row">
+		<div class="col">
+			<p><a href="../static/files/csv_order.csv" download>скачать</a></p>
+		</div>
+	</div>
+
+	{% for k, v in view_res.items() %}
+	<div class="row justify-content-center alert alert-success">
+		{% if error %}
+		<p><strong>Error:</strong> {{ error }}
+			{% endif %}
+			
+			<div class="col-1">
+				<div class="row">
+					<div class="col">
+						<p><span class="badge badge-pill badge-dark">{{ k }} / {{ len_view_res }}</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-11">
+				<div class="row">
+					<div class="col">
+						<p>{% for x, y in v.items() %}
+
+							<div class="table table-sm">
+								<thead>
+									<th scope="col">{{ x }} : {{ y }}</th>
+								</thead>
+								
+								
+							</div>
+
+						{% endfor %}</p>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		{% endfor %}
+		{% endblock %}
+	</div>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<title>MTX - {% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<nav class="navbar navbar-light" style="background-color: #fafafa;">
+	<div class="row">
+		<div class="col">
+			<a href="{{ url_for('src.search') }}" class="btn btn-primary">Поиск</a>
+		</div>
+	</div>	
+</nav>
+
+<section class="container ">
+
+	<div class="row justify-content-center">
+		<div class="col-auto">
+			{% block header %}    		
+			{% endblock %}	
+		</div>
+	</div>
+	{% block content %}
+	{% endblock %}
+</section>
+
+</html>

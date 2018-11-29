@@ -1,0 +1,6 @@
+MSISDN;Дата и время;Сообщение
+['79265130937'];27-01-2018 19:59:01;"[""Кредитный лимит 1500.00 руб. исчерпан на 80%. Внесите платеж или обратитесь к вашему менеджеру по тел. +7 (495) 780-47-10'}""]"
+['79265130937'];29-01-2018 00:19:03;['sonic-auth-1:2018-01-29 00:18:17 java.util.concurrent.ExecutionException: java.sql.SQLException: ORA-00054: resource busy and acquire with NOWAIT specified']
+['79265130937'];29-01-2018 00:20:02;['sonic-auth-1:2018-01-29 00:19:02 java.util.concurrent.ExecutionException: java.sql.SQLException: Exception occurred while getting connection: oracle.ucp.UniversalConnectionPoolException: All connections in the Universal Connection Pool are in use']
+['79265130937'];29-01-2018 00:21:02;['sonic-auth-1:2018-01-29 00:20:03 java.util.concurrent.ExecutionException: java.sql.SQLException: Exception occurred while getting connection: oracle.ucp.UniversalConnectionPoolException: All connections in the Universal Connection Pool are in use']
+['79265130937'];29-01-2018 00:22:02;['sonic-auth-1:2018-01-29 00:21:02 java.util.concurrent.ExecutionException: java.sql.SQLException: Exception occurred while getting connection: oracle.ucp.UniversalConnectionPoolException: All connections in the Universal Connection Pool are in use']
