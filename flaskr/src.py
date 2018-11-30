@@ -12,14 +12,16 @@ directory = os.listdir('../.')
 
 bp = Blueprint('src', __name__, url_prefix='/search')
 
-@bp.route('/search', methods=('GET', 'POST'))
+
+
+@bp.route('/search', methods=('GET', 'POST'))                   #поисковая страница
 def search():
     error = None    
     if request.method == 'POST':
 
-        date_from = request.form['date-from'] #присваивание даты начала
-        date_to = request.form['date-to'] #присваивание даты конца
-        number = request.form['text']
+        date_from = request.form['date-from']                       #присваивание даты начала
+        date_to = request.form['date-to']                             #присваивание даты окончания
+        number = request.form['text']                                   #присваивание номера
         
         file_reader.file_reader(directory)
         search_numbers.search_numbers(file_reader.data)
@@ -33,7 +35,8 @@ def search():
 
     return render_template('search/search.html', error=error)
 
-@bp.route('/result', methods=('GET', 'POST'))
+
+@bp.route('/result', methods=('GET', 'POST'))                       #страница результата поиска
 def result():
     error = None
     if len(text_pars.pars_result) == 0:
@@ -49,3 +52,10 @@ def result():
                                    view_res=view_res,
                                    len_view_res=len_view_res,
                                    error=error)
+
+
+@bp.route('/report', methods=('GET', 'POST'))                       #страница заказа отчета
+def report():
+    error = None
+
+    return render_template('report/report.html')
