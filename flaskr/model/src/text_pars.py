@@ -15,8 +15,8 @@ def text_pars(found_dates):
         if re.search('\n', line):
             line = re.sub('\n', '', line)
         pars_result[i] = {'MSISDN': re.findall(r'\d{11}', line),
-                     'Дата и время': line[1:20],
-                     'Сообщение': re.findall(r'(?<=text..)\w+.+', line)}
+                             'Дата и время': line[1:20],
+                             'Сообщение': re.findall(r'(?<=text..)\w+.+', line)}
         i += 1
 
     return pars_result

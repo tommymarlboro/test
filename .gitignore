@@ -1,1 +1,4 @@
 /venv/
+/flaskr/static/files/csv_order.csv
+/flaskr/static/files/templates_sms.csv
+/flaskr/static/files/templates_sms.txt
